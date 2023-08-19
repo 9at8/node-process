@@ -2,7 +2,7 @@
 var process = module.exports = {};
 
 function runTimeout(fun) {
-    Promise.resolve().then(fun);
+    queueMicrotask(fun);
 }
 
 function runClearTimeout(_marker) {
